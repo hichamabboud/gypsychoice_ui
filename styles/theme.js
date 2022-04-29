@@ -26,6 +26,20 @@ const theme = extendTheme({
                     ...base.components.Button.variants.outline(props),
                     rounded: "full",
                     color : "gray.500"
+                }),
+                detail: (props) => ({
+                    ...base.components.Button.variants.ghost(props),
+                    _hover: {
+                        backgroundColor : "none"    
+                    },
+
+                    _focus: {
+                        underline: "none",
+                        outlineWidth: 0,
+                        backgroundColor : "#fff"
+                    }
+
+
                 })
             }
         }

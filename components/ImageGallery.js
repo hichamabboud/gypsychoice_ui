@@ -7,25 +7,25 @@ const ImageGallery = () => {
 
           <GridItem colSpan={{ base: 3, md : 3 }} rowSpan={{ base : 3}}>
           <AspectRatio ratio={1}>
-            <Image src="/images/pic1.png" alt="pic1" objectFit="cover" rounded="3xl"  />  
+            <Image _hover={{ rounded : "xl", opacity : "0.90", transform : "scale(1.05)"}} src="/images/pic1.png" alt="pic1" objectFit="cover" rounded="3xl"  />  
           </AspectRatio>
         </GridItem>
           
           <GridItem colStart={{ base: 1, md : 4 }} rowStart={{ base : 4, md : 1}} >
           <AspectRatio ratio={1}>
-            <Image src="/images/pic2.png" alt="pic1" objectFit="cover" rounded="3xl"  />  
+            <Image _hover={{ rounded : "xl", opacity : "0.90", transform : "scale(1.05)"}} src="/images/pic2.png" alt="pic1" objectFit="cover" rounded="3xl"  />  
           </AspectRatio>
         </GridItem>
           
           <GridItem colStart={{ base: 2, md : 4 }} rowStart={{ base : 4, md : 2 }} >
           <AspectRatio ratio={1}>
-            <Image src="/images/pic3.png" alt="pic1" objectFit="cover" rounded="3xl"  />  
+            <Image _hover={{ rounded : "xl", opacity : "0.90", transform : "scale(1.05)"}} src="/images/pic3.png" alt="pic1" objectFit="cover" rounded="3xl"  />  
           </AspectRatio>
         </GridItem>
           
           <GridItem colStart={{ base: 3, md: 4 }} rowStart={{ base : 4, md : 3}} >
           <AspectRatio ratio={1}>
-            <Image src="/images/pic4.png" alt="pic1" objectFit="cover" rounded="3xl"  />  
+            <Image _hover={{ rounded : "xl", opacity : "0.90", transform : "scale(1.05)"}} src="/images/pic4.png" alt="pic1" objectFit="cover" rounded="3xl"  />  
           </AspectRatio>
         </GridItem>
     </Grid>
