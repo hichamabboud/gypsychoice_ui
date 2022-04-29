@@ -1,7 +1,7 @@
 import { Container, VStack } from "@chakra-ui/react";
 import Header from "../components/Header";
 import TopNavBar from "../components/TopNavBar";
-// import WhatsIncluded from "../components/WhatsIncluded";
+import WhatsIncluded from "../components/WhatsIncluded";
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
       <VStack spacing={6} alignItems="stretch">
         <TopNavBar />
         <Header />
-        {/* <WhatsIncluded /> */}
+        <WhatsIncluded />
       </VStack>
     </Container>
   )
