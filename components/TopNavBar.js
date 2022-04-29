@@ -2,7 +2,7 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, HStack, Text } from
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 const breadCrumbs = [
-    { name: "Home", url : "/" }, { name: "Apartments", url : "/" }, { name: "Serbia", url : "/" }, { name: "Belgrade", url : "/" }
+    { name: "Home", url : "/" }, { name: "Apartments", url : "/" }, { name: "Utica", url : "/" }, { name: "NY", url : "/" }
 ];
 
 const TopNavBar = () => {
