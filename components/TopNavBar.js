@@ -1,5 +1,6 @@
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, HStack, Text } from "@chakra-ui/react";
+import { Text, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, HStack, } from "@chakra-ui/react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+
 
 const breadCrumbs = [
     { name: "Home", url : "/" }, { name: "Apartments", url : "/" }, { name: "Utica", url : "/" }, { name: "NY", url : "/" }
@@ -8,25 +9,20 @@ const breadCrumbs = [
 const TopNavBar = () => {
 
   return (
-    <HStack as='nav' justifyContent='space-between'>
-        
-        <Button fontSize={{ base : 'sm', md : 'md', lg : 'lg'}} variant='outline' rounded='full' leftIcon={<IoIosArrowBack />} > Go Home </Button>
-
-        <Breadcrumb separator={<IoIosArrowForward />} fontWeight="medium">
+    <Breadcrumb alignSelf={{ base : "flex-start", md : "flex-end", lg : "flex-end", xl : "flex-end"}} separator={<IoIosArrowForward />} fontWeight="medium">
               {breadCrumbs.map((bread, index) => {
 
                 const current = index === breadCrumbs.length - 1;
 
                   return (
-                  <BreadcrumbItem fontSize={{ base : 12, md : 20, lg : 20}} key={bread.name} isCurrentPage={current ? "brand.500" : "brand.200"}>
-                      <BreadcrumbLink href={bread.url} color={ current ? "brand.500" : "gray.700" }>
-                          {bread.name}
+                  <BreadcrumbItem  key={bread.name} isCurrentPage={current ? "brand.500" : "brand.200"}>
+                      <BreadcrumbLink href={bread.url} color={ current ? "brand.500" : "gray.600" }>
+                          <Text fontSize={{ base : "12px", md : "16px", lg : "20px"}}> {bread.name} </Text>
                       </BreadcrumbLink>
                   </BreadcrumbItem>
               )})
             }
         </Breadcrumb>
-    </HStack>
   )
 }
 

@@ -1,4 +1,4 @@
-import { Text, Heading, HStack, IconButton, VStack, Icon, Stack, Box } from "@chakra-ui/react"
+import { Text, Heading, HStack, IconButton, VStack, Icon, Stack, Box, SimpleGrid, GridItem, Flex } from "@chakra-ui/react"
 import { HiOutlineLocationMarker, HiLocationMarker, HiStar } from "react-icons/hi";
 import { FiShare2, FiMoreHorizontal } from "react-icons/fi";
 import { BsHouseDoorFill } from "react-icons/bs";
@@ -12,23 +12,24 @@ const Header = () => {
     return (
       <VStack alignItems='stretch' spacing={5}>
             
-            <HStack justifyContent='space-between'>
-                {/* Header */}
-                <Heading as='h1' fontSize={{ base : 'md', md : '3xl', lg : '5xl'}}> Beach House Belgrade </Heading>
+            <Stack flexDirection={[ "column", "row"]} justifyContent="space-between">
+                
+                    <Heading as='h1' fontSize={{ base : '2xl', md : '3xl', lg : '5xl'}} w="full"> Beach House Belgrade </Heading>
+                
+              
+                    {/* Buttons horizental with Title */}
+                    <HStack spacing={4}>
+                        <IconButton size="sm"  variant='pill' icon={<HiOutlineLocationMarker />} aria-label="get location" />
 
-                {/* Buttons horizental with Title */}
-                <HStack spacing={4}>
-                    <IconButton size="sm"  variant='pill' icon={<HiOutlineLocationMarker />} aria-label="get location" />
+                        <IconButton size="sm"  variant='pill' icon={<FiShare2 />} aria-label="share location" />
 
-                    <IconButton size="sm"  variant='pill' icon={<FiShare2 />} aria-label="share location" />
+                        <IconButton size="sm"  variant='pill' icon={<CgHeart />} aria-label="favorite" />
 
-                    <IconButton size="sm"  variant='pill' icon={<CgHeart />} aria-label="favorite" />
+                        <IconButton size="sm"  variant='pill' icon={<FiMoreHorizontal />} aria-label="more options" />
+                    </HStack>
+            </Stack>
 
-                    <IconButton size="sm"  variant='pill' icon={<FiMoreHorizontal />} aria-label="more options" />
-                    
 
-                </HStack>
-            </HStack>
 
             <Stack spacing={{ base : 1, md : 4}} direction={['column', 'row']} justifyContent='space-between'>
                 <HStack justifyContent='space-between'>
@@ -89,4 +90,28 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;
+
+
+
+
+
+
+
+{/* <HStack justifyContent='space-between' w="full">
+    {/* Header */}
+    <Heading as='h1' fontSize={{ base : 'md', md : '3xl', lg : '5xl'}}> Beach House Belgrade </Heading>
+
+    {/* Buttons horizental with Title */}
+    <HStack spacing={4}>
+        <IconButton size="sm"  variant='pill' icon={<HiOutlineLocationMarker />} aria-label="get location" />
+
+        <IconButton size="sm"  variant='pill' icon={<FiShare2 />} aria-label="share location" />
+
+        <IconButton size="sm"  variant='pill' icon={<CgHeart />} aria-label="favorite" />
+
+        <IconButton size="sm"  variant='pill' icon={<FiMoreHorizontal />} aria-label="more options" />
+        
+
+    </HStack>
+// </HStack> */}

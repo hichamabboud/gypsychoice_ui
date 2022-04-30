@@ -9,11 +9,11 @@ const MainNavBar = () => {
     const [display, changeDisplay] = useState("none");
     
     return (
-        <Flex mb={{ base: 15, md: 10}}>
+        <Flex px={3} mt={4} alignItems="center" justifyContent="space-between" >
             <Flex>
-                <Heading as="h1" fontSize={["md", "xl", "2xl", "3xl"]} pos="fixed" top={{ base: "1.5rem", md : "2.3rem" }} left={{ base : "1rem", md : "2rem"}}> GypsyChoice </Heading>
+                <Heading as="h1" fontSize={["md", "xl", "2xl", "3xl"]} top={{ base: "1.5rem", md : "2.5rem", lg :"3rem" }} left={{ base : "1rem", md : "2rem"}}> GypsyChoice </Heading>
             </Flex>
-            <Flex pos="fixed" top="1rem" right="1rem" align="center">
+            <Flex top="1.7rem" right="1rem" align="center">
                 <Flex display={["none", "none", "flex", "flex"]} mr={4}>
                     <NextLink href="/" passHref >
                         <Button
