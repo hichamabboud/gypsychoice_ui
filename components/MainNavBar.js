@@ -1,4 +1,4 @@
-import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Button, Container, Flex, Heading, IconButton, Switch, useColorMode } from "@chakra-ui/react"
 import NextLink from "next/link";
 import { useState } from "react";
@@ -64,11 +64,13 @@ const MainNavBar = () => {
                     display={["flex", "flex", "none", "none"]}
                     onClick={() => changeDisplay("flex")}
                 />
-                <Switch
+                {/* <Switch
                     isChecked={isDark}
                     onChange={ toggleColorMode }
                 >
-                </Switch>
+                </Switch> */}
+
+                <IconButton variant="ghost" onClick={toggleColorMode} icon={ colorMode === "light" ? <MoonIcon /> : <SunIcon/> }/>
             </Flex>
 
             <Flex
