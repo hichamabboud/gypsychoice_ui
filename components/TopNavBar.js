@@ -9,6 +9,7 @@ const TopNavBar = () => {
 
   return (
     <HStack as='nav' justifyContent='space-between'>
+        
         <Button fontSize={{ base : 'sm', md : 'md', lg : 'lg'}} variant='outline' rounded='full' leftIcon={<IoIosArrowBack />} > Go Home </Button>
 
         <Breadcrumb separator={<IoIosArrowForward />} fontWeight="medium">

@@ -1,20 +1,14 @@
-import { Container, VStack } from "@chakra-ui/react";
-import Header from "../components/Header";
-import TopNavBar from "../components/TopNavBar";
-import WhatsIncluded from "../components/WhatsIncluded";
-import AboutProperty from "../components/AboutProperty";
+import { Box, Container, VStack } from "@chakra-ui/react"
+import MainNavBar from "../components/MainNavBar";
 
-const Home = () => {
+const Home = () => { 
   return (
-    <Container maxW='container.lg' py={{ base : 6, md: 8, lg : 10}}>
-      <VStack spacing={6} alignItems="stretch">
-        <TopNavBar />
-        <Header />
-        <AboutProperty />
-        <WhatsIncluded />
+    <Container maxW="container.xl" p={0} >
+      <VStack w="full" h="100vh" >
+        <MainNavBar />
       </VStack>
     </Container>
   )
 }
 
-export default Home;
+export default Home; 
