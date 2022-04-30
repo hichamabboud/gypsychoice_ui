@@ -4,6 +4,7 @@ import TopNavBar from "../../components/TopNavBar";
 import WhatsIncluded from "../../components/WhatsIncluded";
 import PropertyDetails from "../../components/PropertyDetails";
 import MainNavBar from "../../components/MainNavBar";
+import PropertyHost from "../../components/PropertyHost";
 
 const Home = () => {
   return (
@@ -17,6 +18,9 @@ const Home = () => {
           <Divider />
         <WhatsIncluded />
           <Divider />
+        <PropertyHost />
+          <Divider />
+        
       </VStack>
     </Container>
   )
