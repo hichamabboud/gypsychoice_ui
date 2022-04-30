@@ -104,11 +104,11 @@ const MainNavBar = () => {
                             <Button
                                 as="a" 
                                 variant="ghost"
-                                aria-label="Home"
+                                aria-label="List a property"
                                 my={5}
                                 w="100%"
                                 >
-                                Home
+                                List a property
                             </Button>
                         </NextLink>
 
@@ -116,11 +116,11 @@ const MainNavBar = () => {
                             <Button
                                 as="a" 
                                 variant="ghost"
-                                aria-label="About"
+                                aria-label="Sign in"
                                 my={5}
                                 w="100%"
                                 >
-                                About
+                                Sign in
                             </Button>
                         </NextLink>
 
@@ -128,11 +128,11 @@ const MainNavBar = () => {
                             <Button
                                 as="a" 
                                 variant="ghost"
-                                aria-label="Contact"
+                                aria-label="Sign up"
                                 my={5}
                                 w="100%"
                                 >
-                                Contact
+                                Sign up
                             </Button>
                     </NextLink>
             </Flex>
