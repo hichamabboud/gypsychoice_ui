@@ -97,14 +97,14 @@ const PropertyHost = () => {
           </HStack>
 
           <Text fontSize={{ base: "sm" }} color="gray.700">
-            The post for this location was exactly what we received. The space is modern and clean. It's a little bit of a walk into town, but you could get there by vehicle in less than a minute. Francisco was very responsive with all communication and I would highly recommend this location to anyone!
+            The post for this location was exactly what we received. The space is modern and clean. It is a little bit of a walk into town, but you could get there by vehicle in less than a minute. Francisco was very responsive with all communication and I would highly recommend this location to anyone!
           </Text>
           <Divider w="full" borderWidth={1} borderColor="gray.600" />
         </VStack>
 
         {/* Review # 3 */}
         <VStack alignItems="flex-start" spacing={4}>
-          <HStack>
+          <HStack w="full">
             <Wrap>
               <WrapItem>
                 <Avatar name="John Doe" src="/images/landlords/victor.jpg" size="sm" />
@@ -120,6 +120,25 @@ const PropertyHost = () => {
           </Text>
           <Divider w="full" borderWidth={1} borderColor="gray.600" />
         </VStack>
+
+          {/* Review # 4 */}
+        <VStack alignItems="flex-start" spacing={4}>
+          <HStack w="full">
+            <Wrap>
+              <WrapItem>
+                <Avatar name="John Doe" src="/images/landlords/victor.jpg" size="sm" />
+              </WrapItem>
+            </Wrap>
+
+            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.700" > James Pallate </Text>
+            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.500"> May 2022 </Text>
+          </HStack>
+
+          <Text fontSize={{ base: "sm" }} color="gray.700">
+            Great location, super clean and lovely room overall! Not too far from downtown so a little noise but nothing too bad. Hosts are friendly and responsive to questions. All in all, a wonderful spot to stay!
+          </Text>
+          <Divider w="full" borderWidth={1} borderColor="gray.600" />
+        </VStack>
       </VStack>
 
           <Modal onClose={onClose} isOpen={isOpen} isCentered>
@@ -128,7 +147,7 @@ const PropertyHost = () => {
               <ModalHeader> About host </ModalHeader>
               <ModalBody>
                 <VStack alignItems="flex-start" spacing={4}>
-                  <Text as="i"> “Min Jin Lee&aposs debut novel, Free Food for Millionaires, was one of the “Top 10 Novels of the Year” for The Times (London), NPR&aposs Fresh Air, and USA Today. Her short fiction has been featured on NPR&aposs Selected Shorts. Her writings have appeared in The Times Literary Supplement, Condé Nast Traveler, The Times (London), Vogue, Travel+Leisure, Wall Street Journal, New York Times Magazine, and Food & Wine. Her essays and literary criticism have been anthologized widely. She served as a columnist for the Chosun Ilbo, the leading paper on South Korea. She lives in New York with her family.”</Text>
+                  <Text as="i"> “Min Jin Lee debut novel, Free Food for Millionaires, was one of the “Top 10 Novels of the Year” for The Times (London), Fresh Air, and USA Today. Her short fiction has been featured on NPR Selected Shorts. Her writings have appeared in The Times Literary Supplement, Condé Nast Traveler, The Times (London), Vogue, Travel+Leisure, Wall Street Journal, New York Times Magazine, and Food & Wine. Her essays and literary criticism have been anthologized widely. She served as a columnist for the Chosun Ilbo, the leading paper on South Korea. She lives in New York with her family.”</Text>
                   <Text> Sincerely yours, </Text>
                   <Text> John Doe.</Text>
                 </VStack>
