@@ -128,7 +128,7 @@ const PropertyHost = () => {
               <ModalHeader> About host </ModalHeader>
               <ModalBody>
                 <VStack alignItems="flex-start" spacing={4}>
-                  <Text as="i"> “Min Jin Lee’s debut novel, Free Food for Millionaires, was one of the “Top 10 Novels of the Year” for The Times (London), NPR’s Fresh Air, and USA Today. Her short fiction has been featured on NPR’s Selected Shorts. Her writings have appeared in The Times Literary Supplement, Condé Nast Traveler, The Times (London), Vogue, Travel+Leisure, Wall Street Journal, New York Times Magazine, and Food & Wine. Her essays and literary criticism have been anthologized widely. She served as a columnist for the Chosun Ilbo, the leading paper on South Korea. She lives in New York with her family.”</Text>
+                  <Text as="i"> “Min Jin Lee&aposs debut novel, Free Food for Millionaires, was one of the “Top 10 Novels of the Year” for The Times (London), NPR&aposs Fresh Air, and USA Today. Her short fiction has been featured on NPR&aposs Selected Shorts. Her writings have appeared in The Times Literary Supplement, Condé Nast Traveler, The Times (London), Vogue, Travel+Leisure, Wall Street Journal, New York Times Magazine, and Food & Wine. Her essays and literary criticism have been anthologized widely. She served as a columnist for the Chosun Ilbo, the leading paper on South Korea. She lives in New York with her family.”</Text>
                   <Text> Sincerely yours, </Text>
                   <Text> John Doe.</Text>
                 </VStack>
