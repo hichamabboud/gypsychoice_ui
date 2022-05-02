@@ -5,7 +5,7 @@ import { MdOutlinePets } from "react-icons/md";
 
 const WhatsIncluded = () => {
   return (
-      <VStack w='full' spacing={6}>
+      <VStack w='full' spacing={6} px={2}>
           
         <Heading as='h2' alignSelf='flex-start' fontSize='xl' fontWeight='normal' > What is included? </Heading>
 

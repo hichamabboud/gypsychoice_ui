@@ -4,7 +4,7 @@ import { useDisclosure } from "@chakra-ui/react";
 const PropertyDetails = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
-        <Stack alignItems="flex-start">
+        <Stack alignItems="flex-start" px={2}>
             <Heading as="h2" fontWeight='normal' size="lg"> Property details </Heading>
             <Text fontSize='sm' noOfLines={{ base: 4 }}> This home is a safe and respectable environment, it is also environmentally friendly. The room is furnished, clean and has large built ins for storage. There is a kitchen with refridgerator for your food also plenty of pantry storage for those who like to cook. It is a quiet respectable house hold. I am a teacher and interior designer. Travel-Public transport is close to universities, shops and CBD, there is also a ferry to the Central Business District. Buses and trains to the city and universities are easy to access. We are a caring home stay family and look after our guests. Clean and quiet respectable environment.</Text>  
             <Button onClick={onOpen} variant="detail" size={{ base: "sm" }}> More details </Button>

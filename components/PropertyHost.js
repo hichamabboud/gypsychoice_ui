@@ -1,60 +1,126 @@
-import { Heading, Stack, HStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Image, Button, Text, VStack, IconButton, GridItem, Grid, Link } from "@chakra-ui/react";
+import { Heading, keyframes, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, Text, VStack, IconButton, GridItem, Grid, Link, Avatar, Wrap, WrapItem, HStack, Divider, Icon } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import NextLink from "next/link";
+import { motion } from "framer-motion";
+import { AiFillStar } from "react-icons/ai";
+
+const animationKeyframes = keyframes`
+  0% { transform: scale(1) rotate(0); border-radius: 20%; }
+  25% { transform: scale(1.01) rotate(0); border-radius: 20%; }
+  50% { transform: scale(1.03) rotate(0); border-radius: 20%; }
+  75% { transform: scale(1.04) rotate(0); border-radius: 20%; }
+  100% { transform: scale(1.07) rotate(0); border-radius: 20%; }
+`;
+
+const animation = `${animationKeyframes} 2s ease-in-out infinite`;
 
 const PropertyHost = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <VStack alignItems="flex-start">
-      <Grid templateColumns="repeat(9, 1fr)" templateRows="repeat(3, 0.5fr)" justifyContent="space-between" alignItems="center" w="full" columnGap={4}>
+    <VStack w="full">
+      <Grid templateColumns="repeat(5, 1fr)" templateRows={{ base: "repeat(3, 0.5fr)", md: "repeat(1, 1fr)" }} justifyContent="space-between" w="full" gap={4} alignItems="center" px={4}>
           {/* Grid # 1 */}
-        <GridItem colSpan={{ base : 7, md : 4, lg : 5, xl : 5 }} colStart={{ base : 1, md : 1, lg : 1, xl : 1 }} rowStart={{ base : 1, md : 1, lg : 1, xl : 1}} >
+        <GridItem colSpan={{ base : 5, md : 3 }} colStart={{ base : 2, md : 1 }} rowStart={{ base : 1, md : 1}} >
               <Heading as="h2" color="gray.600" fontSize={{ base : "md", md : "2xl", lg : "3xl"}} fontWeight="bold">
                 Hosted by  
                 <Text fontSize={{ base : "md", md : "2xl", lg : "3xl"}}  pl={2} as="i" textAlign="center" color="#CA511F"> John Doe</Text>
               </Heading>
         </GridItem>
         
-        {/* Grid # 2 */}
-        <GridItem colSpan={{ base: 9, md: 3, lg: 2, xl: 2 }} colStart={{ base : 1, md : 5, lg : 6, xl : 6 }} rowStart={{ base : 2, md : 1, lg : 1, xl : 1 }}>
-              <HStack>
-                <Heading as="h4" fontSize={{ md : "xl"}}> Reviews (24) </Heading>
-                <HStack>
-                  <AiFillStar />
-                  <AiFillStar />
-                  <AiFillStar />
-                  <AiFillStar />
-                  <AiOutlineStar/>
-                </HStack>
-              </HStack>
-        </GridItem>
+        
 
         {/* Grid # 3 */}
-        <GridItem colSpan={{ base : 2, md : 2, lg : 2, xl : 2 }} colStart={{ base : 8, md : 9, lg : 9, xl : 9 }} rowStart={{ base : 1, md : 1, lg : 1, xl : 1 }}>
-          <Image borderRadius="full" boxSize="60px" src="/images/landlords/landlord.jpg" fallbackSrc='https://via.placeholder.com/60' alt="property listed by Rayan Abboud"/>
+        <GridItem as={motion.div} animation={animation} colSpan={{ base: 5, md: 1 }} colStart={{ base: 3, md: 5 }} rowStart={{ base: 2, md: 1 }} ml={{ md : 14, lg : 20 }}>
+          <Wrap>
+            <WrapItem>
+              <Avatar name="John Doe" src="/images/landlords/johndoe.jpg" size="lg" />
+            </WrapItem>
+          </Wrap>
         </GridItem>  
 
-        {/* Grid # 4 */}
-        <GridItem colSpan={{ base : 4, md : 4, lg : 4, xl : 4 }} mt={4} colStart={{ base : 1, md : 1, lg : 1, xl : 1 }} rowStart={{ base : 3, md : 2, lg : 2, xl : 2}}>
-          <Button fontSize={{ base : "sm"}} variant="outline" colorScheme="teal" onClick={onOpen}>
-            About host
+        <GridItem colSpan={{ base: 5, md: 2 }} colStart={{ base: 1, md: 3 }} rowStart={{ base: 3, md: 1 }} w="full" ml={{ base : 4, md : 0 }}>
+          <Button w="full"  variant="outline" colorScheme="orange" _hover={{ transform : "scale(1.01)", backgroundColor : "#CA511F", color : "#fff", borderWidth : "none"}} >
+            <NextLink href="#" passHref>
+              <Link _hover={{ textDecoration:"none" }}>
+                Chat with landlord
+              </Link>
+            </NextLink>
           </Button>
         </GridItem>
-        
-        {/* Grid # 5 */}
-        <GridItem colSpan={{ base : 4, md : 4, lg : 4, xl : 4 }} mt={4} colStart={{ base : 6, md : 8, lg : 8, xl : 8 }} rowStart={{ base : 3, md : 2, lg : 2, xl : 2}}>
-          <NextLink href="#" passHref>
-            <Link>
-              <Button fontSize={{ base : "sm"}} variant="outline" colorScheme="orange">
-                 Contact Host
-              </Button>
-            </Link>
-          </NextLink>
-        </GridItem>
-
-  
       </Grid>
+
+      <Divider />
+
+      <VStack w="full" alignItems="flex-start">
+        <HStack w="full">
+          <Heading as="h2" color="gray.600" fontSize={{ base: "md", md: "2xl", lg: "3xl" }} fontWeight="bold"> (5) Reviews </Heading>
+          
+          <HStack>
+            <Icon color="orange.400" as={AiFillStar} />
+            <Icon color="orange.400" as={AiFillStar}/>
+            <Icon color="orange.400" as={AiFillStar}/>
+            <Icon color="orange.400" as={AiFillStar}/>
+            <Icon color="orange.400" as={AiFillStar}/>
+          </HStack>
+        </HStack>
+
+        {/* Review # 1 */}
+        <VStack alignItems="flex-start" spacing={4}>
+          <HStack>
+            <Wrap>
+              <WrapItem>
+                <Avatar name="John Doe" src="/images/landlords/jennifer.jpg" size="sm" />
+              </WrapItem>
+            </Wrap>
+
+            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.700" > Mellisa Brown </Text>
+            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.500"> Aug 2022 </Text>
+          </HStack>
+
+          <Text fontSize={{ base: "sm" }} color="gray.700">
+            Great location, super clean and lovely room overall! Not too far from downtown so a little noise but nothing too bad. Hosts are friendly and responsive to questions. All in all, a wonderful spot to stay!
+          </Text>
+          <Divider w="full" borderWidth={1} borderColor="gray.600" />
+        </VStack>
+
+        {/* Review # 2 */}
+        <VStack alignItems="flex-start" spacing={4}>
+          <HStack>
+            <Wrap>
+              <WrapItem>
+                <Avatar name="John Doe" src="/images/landlords/jennifer-smith.jpg" size="sm" />
+              </WrapItem>
+            </Wrap>
+
+            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.700" > Jennifer Smith </Text>
+            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.500"> Jan 2020 </Text>
+          </HStack>
+
+          <Text fontSize={{ base: "sm" }} color="gray.700">
+            The post for this location was exactly what we received. The space is modern and clean. It's a little bit of a walk into town, but you could get there by vehicle in less than a minute. Francisco was very responsive with all communication and I would highly recommend this location to anyone!
+          </Text>
+          <Divider w="full" borderWidth={1} borderColor="gray.600" />
+        </VStack>
+
+        {/* Review # 3 */}
+        <VStack alignItems="flex-start" spacing={4}>
+          <HStack>
+            <Wrap>
+              <WrapItem>
+                <Avatar name="John Doe" src="/images/landlords/victor.jpg" size="sm" />
+              </WrapItem>
+            </Wrap>
+
+            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.700" > Victor Dimond </Text>
+            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.500"> May 2021 </Text>
+          </HStack>
+
+          <Text fontSize={{ base: "sm" }} color="gray.700">
+            Great location, super clean and lovely room overall! Not too far from downtown so a little noise but nothing too bad. Hosts are friendly and responsive to questions. All in all, a wonderful spot to stay!
+          </Text>
+          <Divider w="full" borderWidth={1} borderColor="gray.600" />
+        </VStack>
+      </VStack>
 
           <Modal onClose={onClose} isOpen={isOpen} isCentered>
             <ModalOverlay />
