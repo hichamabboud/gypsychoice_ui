@@ -97,7 +97,7 @@ const PropertyHost = () => {
           </HStack>
 
           <Text fontSize={{ base: "sm" }} color="gray.700">
-            The post for this location was exactly what we received. The space is modern and clean. It is a little bit of a walk into town, but you could get there by vehicle in less than a minute. Francisco was very responsive with all communication and I would highly recommend this location to anyone!
+            Fantastic stay, very clear check-in instructions, very clean room
           </Text>
           <Divider w="full" borderWidth={1} borderColor="gray.600" />
         </VStack>
@@ -126,11 +126,11 @@ const PropertyHost = () => {
           <HStack w="full">
             <Wrap>
               <WrapItem>
-                <Avatar name="John Doe" src="/images/landlords/victor.jpg" size="sm" />
+                <Avatar name="John Doe" src="/images/landlords/rebecca.jpg" size="sm" />
               </WrapItem>
             </Wrap>
 
-            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.700" > James Pallate </Text>
+            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.700" > Rebecca Milano </Text>
             <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.500"> May 2022 </Text>
           </HStack>
 
