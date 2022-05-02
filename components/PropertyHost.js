@@ -17,7 +17,7 @@ const animation = `${animationKeyframes} 2s ease-in-out infinite`;
 const PropertyHost = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <VStack w="full">
+    <VStack w="full" spacing={8}>
       <Grid templateColumns="repeat(5, 1fr)" templateRows={{ base: "repeat(3, 0.5fr)", md: "repeat(1, 1fr)" }} justifyContent="space-between" w="full" gap={4} alignItems="center" px={4}>
           {/* Grid # 1 */}
         <GridItem colSpan={{ base : 5, md : 3 }} colStart={{ base : 2, md : 1 }} rowStart={{ base : 1, md : 1}} >
@@ -51,7 +51,7 @@ const PropertyHost = () => {
 
       <Divider />
 
-      <VStack w="full" alignItems="flex-start">
+      <VStack w="full" alignItems="flex-start" spacing={8}>
         <HStack w="full">
           <Heading as="h2" color="gray.600" fontSize={{ base: "md", md: "2xl", lg: "3xl" }} fontWeight="bold"> (5) Reviews </Heading>
           
@@ -66,7 +66,7 @@ const PropertyHost = () => {
 
         {/* Review # 1 */}
         <VStack alignItems="flex-start" spacing={4}>
-          <HStack>
+          <HStack w="full">
             <Wrap>
               <WrapItem>
                 <Avatar name="John Doe" src="/images/landlords/jennifer.jpg" size="sm" />
@@ -80,12 +80,12 @@ const PropertyHost = () => {
           <Text fontSize={{ base: "sm" }} color="gray.700">
             Great location, super clean and lovely room overall! Not too far from downtown so a little noise but nothing too bad. Hosts are friendly and responsive to questions. All in all, a wonderful spot to stay!
           </Text>
-          <Divider w="full" borderWidth={1} borderColor="gray.600" />
+          <Divider w="full" borderColor="gray.600" />
         </VStack>
 
-        {/* Review # 2 */}
+         {/* Review # 2 */}
         <VStack alignItems="flex-start" spacing={4}>
-          <HStack>
+          <HStack w="full">
             <Wrap>
               <WrapItem>
                 <Avatar name="John Doe" src="/images/landlords/jennifer-smith.jpg" size="sm" />
@@ -93,13 +93,13 @@ const PropertyHost = () => {
             </Wrap>
 
             <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.700" > Jennifer Smith </Text>
-            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.500"> Jan 2020 </Text>
+            <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.500"> Nov 2019 </Text>
           </HStack>
 
           <Text fontSize={{ base: "sm" }} color="gray.700">
-            Fantastic stay, very clear check-in instructions, very clean room
+            Great location, super clean and lovely room overall! Not too far from downtown so a little noise but nothing too bad. Hosts are friendly and responsive to questions. All in all, a wonderful spot to stay!
           </Text>
-          <Divider w="full" borderWidth={1} borderColor="gray.600" />
+          <Divider w="full" borderColor="gray.600" />
         </VStack>
 
         {/* Review # 3 */}
@@ -118,7 +118,7 @@ const PropertyHost = () => {
           <Text fontSize={{ base: "sm" }} color="gray.700">
             Great location, super clean and lovely room overall! Not too far from downtown so a little noise but nothing too bad. Hosts are friendly and responsive to questions. All in all, a wonderful spot to stay!
           </Text>
-          <Divider w="full" borderWidth={1} borderColor="gray.600" />
+          <Divider w="full" borderColor="gray.600" />
         </VStack>
 
           {/* Review # 4 */}
@@ -137,7 +137,7 @@ const PropertyHost = () => {
           <Text fontSize={{ base: "sm" }} color="gray.700">
             Great location, super clean and lovely room overall! Not too far from downtown so a little noise but nothing too bad. Hosts are friendly and responsive to questions. All in all, a wonderful spot to stay!
           </Text>
-          <Divider w="full" borderWidth={1} borderColor="gray.600" />
+          <Divider w="full" borderColor="gray.600" />
         </VStack>
       </VStack>
 
@@ -162,3 +162,26 @@ const PropertyHost = () => {
 }
 
 export default PropertyHost;
+
+
+
+
+
+// {/* Review # 2 */}
+//         <VStack alignItems="flex-start" spacing={4}>
+//           <HStack w="full">
+//             <Wrap>
+//               <WrapItem>
+//                 <Avatar name="John Doe" src="/images/landlords/jennifer-smith.jpg" size="sm" />
+//               </WrapItem>
+//             </Wrap>
+
+//             <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.700" > Jennifer Smith </Text>
+//             <Text fontSize={{ base: "xs" }} fontWeight="bold" color="gray.500"> Jan 2020 </Text>
+//           </HStack>
+
+//           <Text fontSize={{ base: "sm" }} color="gray.700">
+//             Fantastic stay, very clear check-in instructions, very clean room
+//           </Text>
+//           <Divider w="full" borderColor="gray.600" />
+//         </VStack>
